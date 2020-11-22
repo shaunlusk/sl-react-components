@@ -4,10 +4,13 @@
   "license": "MIT",
   "main": "dist/index.js",
   "private": false,
-  "files": [ "dist", "README.md" ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "repository": {
-      "type": "git",
-      "url": "https://github.com/shaunlusk/sl-react-components"
+    "type": "git",
+    "url": "https://github.com/shaunlusk/sl-react-components"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
@@ -50,6 +53,7 @@
     ]
   },
   "devDependencies": {
-    "csstype": "^3.0.5"
+    "csstype": "^3.0.5",
+    "node-sass": "^4.14.1"
   }
 }
