@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "dist",
+    "module": "esnext",
+    "target": "es5",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "declaration": true
+  },
+  "include": [
+    "src/components/index.ts"
+  ]
+}

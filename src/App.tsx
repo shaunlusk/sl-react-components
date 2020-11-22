@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { DateDisplay } from './components';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         >
           Learn React
         </a>
+        <div><DateDisplay datetime={new Date()} format="YYYYMMDD"></DateDisplay></div>
       </header>
     </div>
   );

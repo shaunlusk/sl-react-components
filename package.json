@@ -1,8 +1,14 @@
 {
-  "name": "sl-react-components",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@shaunlusk/sl-react-components",
+  "version": "0.1.1",
   "license": "MIT",
+  "main": "dist/index.js",
+  "private": false,
+  "files": [ "dist", "README.md" ],
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/shaunlusk/sl-react-components"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
@@ -21,7 +27,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean": "rimraf dist",
+    "compile": "npm run clean && tsc --project \"tsconfig.lib.json\""
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "csstype": "^3.0.5"
   }
 }
