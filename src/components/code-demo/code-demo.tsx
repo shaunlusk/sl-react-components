@@ -3,13 +3,19 @@ import reactElementToJSXString from 'react-element-to-jsx-string';
 
 export interface ICodeDemoProps {
     element: any;
+    functionReplace?: string;
 }
 
-function format(elementString: string): string {
+function format(elementString: string, functionReplace?: string): string {
     const allTokens = tokenize(elementString)
     const tokens = stripEmptyTokens(allTokens);
-    const result = tabify(tokens);
+    const tabified = tabify(tokens);
+    const result = functionReplace ? replaceFunction(tabified, functionReplace) : tabified;
     return result;
+}
+
+function replaceFunction(str: string, replacement: string) {
+    return str.replaceAll('function noRefCheck() {}', replacement);
 }
 
 function tabify(tokens: string[]): string {
@@ -66,6 +72,6 @@ function tokenize(str: string): string[] {
     return tokens;
 }
 
-export const CodeDemo: FunctionComponent<ICodeDemoProps> = ({element}) => {
-  return <div className="code">{format(reactElementToJSXString(element))}</div>;
+export const CodeDemo: FunctionComponent<ICodeDemoProps> = ({element, functionReplace}) => {
+  return <div className="code">{format(reactElementToJSXString(element), functionReplace)}</div>;
 }

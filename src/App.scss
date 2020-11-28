@@ -1,0 +1,68 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.App {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 5px;
+}
+
+.App-header {
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.demo {
+  border: 1px solid white;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  margin-top: 25px;
+}
+
+.demo-items {
+  padding-bottom: 10px;
+}
+
+$demo-background: #112233;
+
+.demo-items {
+  padding: 3px;
+  padding-top: 25px;
+  
+  > div {
+    border-left: 1px solid white;
+    padding-left: 10px;
+  }
+
+
+  &-comment {
+    font-weight: bold;
+  }
+  
+  &-code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    background-color: $demo-background;
+    white-space: pre;
+  }
+  
+  &-code-header {
+    padding-top: 5px;
+  }
+  
+  
+  &-result {
+    padding: 3px;
+    font-weight: bold;
+    background-color: $demo-background;
+  }
+
+  &-result-header {
+    padding: 3px;
+  }
+}
