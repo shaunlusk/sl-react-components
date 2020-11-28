@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { DateDisplay, NumberDisplay, Tabs, Tab, TimeDisplay, Modal } from './components';
+import { DateDisplay, NumberDisplay, Tabs, Tab, TimeDisplay, Modal, TrueFalseSelectionModal } from './components';
 import { CodeDemo } from './components/code-demo/code-demo';
 
 interface Demo {
@@ -29,6 +29,7 @@ interface AppState {
   selectedTab: string;
   demos: Demo[];
   showModal: boolean;
+  showTrueFalseSelectionModal: boolean;
   activatableDemos: ActivatableDemo[];
 }
 
@@ -73,10 +74,26 @@ class App extends React.Component<any, AppState> {
         },
       ],
       showModal: false,
+      showTrueFalseSelectionModal: false,
       activatableDemos: [
         {name:"Modal",
           items: [
             {comment: "Basic Usage", activate: () => this.setState({showModal:true}), functionReplace:' <function that sets optional "show" property to false> ', fn: () => <Modal title="Sample Modal" buttonText="Close" handleClose={this.handleCloseModal.bind(this)} show={this.state.showModal}>Sample Modal Dialogue.  Just close it.</Modal>},
+          ]
+        },
+        {name:"TrueFalseSelectionModal",
+          items: [
+            {comment: "Basic Usage", 
+              activate: () => this.setState({showTrueFalseSelectionModal:true}), 
+              functionReplace:'(result) => {\n        if (true) dosomething();\n        else somethingelse();\n        closeModal();\n  })', 
+              fn: () => (<TrueFalseSelectionModal 
+                title="Sample TrueFalseSelectionModal" 
+                acceptText="Accept" 
+                rejectText="Reject"
+                handleClose={this.handleCloseModal.bind(this)} 
+                show={this.state.showTrueFalseSelectionModal}
+                >Sample TrueFalseSelectionModal Dialogue.  Click 'Accept' or 'Reject'.
+                </TrueFalseSelectionModal>)},
           ]
         }
       ]
@@ -89,6 +106,7 @@ class App extends React.Component<any, AppState> {
 
   handleCloseModal() {
     this.setState({showModal: false});
+    this.setState({showTrueFalseSelectionModal: false});
   }
 
   render() {
