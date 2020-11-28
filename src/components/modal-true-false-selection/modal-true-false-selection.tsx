@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './modal-true-false-selection.scss';
 
 export interface ITrueFalseSelectionModalProps {
   handleClose(response: boolean): void;

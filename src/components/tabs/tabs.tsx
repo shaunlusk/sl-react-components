@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Tab } from './tab';
-import './tabs.scss';
 
 export interface ITabsProps {
   activeTabLabel?: string;

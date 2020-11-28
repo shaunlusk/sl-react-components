@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './modal.scss';
 
 export interface IModalProps {
   handleClose(): void;

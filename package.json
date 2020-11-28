@@ -1,6 +1,6 @@
 {
   "name": "@shaunlusk/sl-react-components",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "license": "MIT",
   "main": "dist/index.js",
   "private": false,
@@ -13,18 +13,12 @@
     "url": "https://github.com/shaunlusk/sl-react-components"
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.2.2",
-    "@types/jest": "^26.0.15",
     "@types/node": "^12.19.6",
     "@types/react": "^16.14.1",
     "@types/react-dom": "^16.9.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.0",
-    "typescript": "4.0.5",
-    "web-vitals": "^0.2.4"
+    "typescript": "4.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,7 +26,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "clean": "rimraf dist",
-    "compile": "npm run clean && tsc --project \"tsconfig.lib.json\""
+    "copystyles": "cp -r ./src/styles ./dist/styles",
+    "compile": "npm run clean && tsc --project \"tsconfig.lib.json\" && npm run copystyles"
   },
   "eslintConfig": {
     "extends": [
@@ -53,8 +48,14 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.2.2",
+    "@types/jest": "^26.0.15",
     "csstype": "^3.0.5",
     "node-sass": "^4.14.1",
-    "react-element-to-jsx-string": "^14.3.2"
+    "react-element-to-jsx-string": "^14.3.2",
+    "react-scripts": "4.0.0",
+    "web-vitals": "^0.2.4"
   }
 }
