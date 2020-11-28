@@ -14,6 +14,16 @@
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.modal-title {
+  padding-bottom: 5px;
+  border-bottom: 1px solid grey;
+  font-weight: bolder;
 }
 
 .modal-display-block {
@@ -24,6 +34,19 @@
   display: none;
 }
 
+.modal-content {
+  padding-top: 8px;
+}
+
 .modal-buttons {
   float: right;
+}
+
+.modal-button {
+  background-color: yellowgreen;
+  color: white;
+  border: 3px solid green;
+  border-radius: 3px;
+  padding: 5px;
+  font-weight: 800;
 }

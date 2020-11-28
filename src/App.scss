@@ -66,3 +66,18 @@ $demo-background: #112233;
     padding: 3px;
   }
 }
+
+.btn {
+  background-color: yellowgreen;
+  color: white;
+  border: 3px solid green;
+  border-radius: 3px;
+  padding: 5px;
+  font-weight: 800;
+  font-size: 10pt;
+
+  &-danger {
+      background-color: orangered;
+      border: 3px solid darkred;
+  }
+}
