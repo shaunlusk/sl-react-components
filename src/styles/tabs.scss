@@ -1,15 +1,15 @@
-.tab-container {
+.slrc-tab-container {
     margin: auto;
 }
   
-.tab-headers {
+.slrc-tab-headers {
     align-items: left;
     text-align: left;
     display: flex;
     flex-wrap: wrap;
 }
 
-.tab-header {
+.slrc-tab-header {
     padding: 10px;
     margin-right: 2px;
     border: 1px solid white;
@@ -22,13 +22,13 @@
     cursor: pointer;
 }
 
-.active-tab-header {
+.active-slrc-tab-header {
     color:white;
     background-color: darkblue;
     font-weight: 700;
 }
 
-.tab-content {
+.slrc-tab-content {
     padding: 5px;
     border: 1px solid white;
     border-top-right-radius: 5px;

@@ -19,10 +19,10 @@ class Tabs extends React.Component<ITabsProps, any> {
     const activeTab = this.props.activeTabLabel 
       ? (this.props.children.find(tabEl => tabEl.props.label === this.props.activeTabLabel) ?? this.props.children[0])
       : this.props.children[0];
-    return <div className="tab-container">
-      <div className="tab-headers">
+    return <div className="slrc-tab-container">
+      <div className="slrc-tab-headers">
         {this.props.children.map(tab => 
-          <div key={"tab-header-" + tab.props.label} className={"tab-header " + (tab === activeTab ? "active-tab-header" : "")}
+          <div key={"slrc-tab-header-" + tab.props.label} className={"slrc-tab-header " + (tab === activeTab ? "active-slrc-tab-header" : "")}
             onClick={() => this._setActiveTab(tab)}
           >
             {tab.props.label}

@@ -6,6 +6,6 @@ export interface ITabProps {
 
 export class Tab extends React.Component<ITabProps, any> {
   public render() {
-    return <div className="tab-content">{this.props.children}</div>
+    return <div className="slrc-tab-content">{this.props.children}</div>
   }
 }

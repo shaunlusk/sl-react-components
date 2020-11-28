@@ -73,5 +73,5 @@ function tokenize(str: string): string[] {
 }
 
 export const CodeDemo: FunctionComponent<ICodeDemoProps> = ({element, functionReplace}) => {
-  return <div className="code">{format(reactElementToJSXString(element), functionReplace)}</div>;
+  return <div>{format(reactElementToJSXString(element), functionReplace)}</div>;
 }

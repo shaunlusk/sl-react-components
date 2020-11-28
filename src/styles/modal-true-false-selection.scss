@@ -1,4 +1,4 @@
-.modal-true-false {
+.slrc-modal-true-false {
   position: fixed;
   top: 0;
   left: 0;
@@ -7,7 +7,7 @@
   background: rgba(0, 0, 0, 0.9);
 }
 
-.modal-true-false-main {
+.slrc-modal-true-false-main {
   position:fixed;
   width: 80%;
   height: auto;
@@ -21,24 +21,24 @@
   padding: 8px;
 }
 
-.modal-true-false-display-block {
+.slrc-modal-true-false-display-block {
   display: block;
 }
 
-.modal-true-false-display-none {
+.slrc-modal-true-false-display-none {
   display: none;
 }
 
-.modal-true-false-buttons {
+.slrc-modal-true-false-buttons {
   float: right;
   display:flex;
 }
 
-.modal-true-false-buttons-spacer {
+.slrc-modal-true-false-buttons-spacer {
   width: 3px;
 }
 
-.modal-true-false-buttons-accept {
+.slrc-modal-true-false-buttons-accept {
   background-color: yellowgreen;
   color: white;
   border: 3px solid green;
@@ -47,7 +47,7 @@
   font-weight: 800;
 }
 
-.modal-true-false-buttons-reject {
+.slrc-modal-true-false-buttons-reject {
   background-color: orangered;
   color: white;
   border: 3px solid darkred;
@@ -56,12 +56,12 @@
   font-weight: 800;
 }
 
-.modal-true-false-title {
+.slrc-modal-true-false-title {
   padding-bottom: 5px;
   border-bottom: 1px solid grey;
   font-weight: bolder;
 }
 
-.modal-true-false-content {
+.slrc-modal-true-false-content {
   padding-top: 8px;
 }
