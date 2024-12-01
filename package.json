@@ -28,7 +28,8 @@
     "eject": "react-scripts eject",
     "clean": "rimraf dist",
     "copystyles": "cp -r ./src/styles ./dist/styles",
-    "compile": "npm run clean && tsc --project \"tsconfig.lib.json\" && npm run copystyles"
+    "compile": "npm run clean && tsc --project \"tsconfig.lib.json\" && npm run copystyles",
+    "build:docs": "typedoc --out docs src/components"
   },
   "eslintConfig": {
     "extends": [
@@ -56,6 +57,7 @@
     "csstype": "^3.0.5",
     "react-element-to-jsx-string": "^14.3.2",
     "react-scripts": "4.0.0",
+    "typedoc": "^0.19.2",
     "web-vitals": "^0.2.4"
   }
 }
